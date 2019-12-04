@@ -1,9 +1,12 @@
+@import '../style/mixins.scss';
+
 .landing-heading{
     display: flex;
     width: 95%;
     margin: auto;
     justify-content: center;
     flex-direction: column;
+    
     
     *{
         width: 400px;
@@ -15,34 +18,22 @@
         margin-top:40px;
     }
 }
+
+
 .landing-container{
-    display: flex;
-    margin:auto;
-    min-height: 60vh;
-    width: 70%;
     margin-top:30px;
-    flex-direction: row;
+    @include container(none, inherit,60vh, 70%,inherit);
     .card{
-        text-decoration: none;
-        flex:1;
-        display: flex;
-        background: #fff;
-        margin: 10px;
-        transition: .3s;
-        flex-direction: column;
-        color:black;
+        @include cardland(#00ff33);
         &:hover{
-            transition: .3s;        
-            box-shadow: 0px 3px 7px rgba(0,0,0, .7);
+            @include cardlandHover();
         }
 
         .top-section{
-            flex:2;
+            
+            @include container(2,column,100%, 70%,inherit);
             border-bottom: 1px solid #555;
-            width: 70%;
-            margin:auto;
-            display: flex;
-            flex-direction: column;
+            
             .icon{
                 flex:4;
                 display:flex;

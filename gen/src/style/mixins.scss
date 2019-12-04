@@ -1,0 +1,31 @@
+// mixins can be included using "@include MIXIN_NAME" and take paramaters if necessary.
+// "$variable: set_here;" ... mixin parameters can have default values if not set e.g.
+// @mixin test($name: "example"){...} where name will be example
+
+@mixin container($flexnum: none, $direction: row, $height: 100%, $width: 100%, $color:teal){
+    flex: $flexnum;
+    display: flex;
+    flex-direction: $direction;
+    min-height: $height;
+    max-width: $width;
+    margin:auto;
+    background-color: $color;
+}
+
+@mixin cardland($color: #fff){
+    text-decoration: none;
+    flex:1;
+    display: flex;
+    background: $color;
+    margin: 10px;
+    transition: .3s;
+    flex-direction: column;
+    color:black;
+}
+
+@mixin cardlandHover() {
+  
+        transition: .3s;        
+        box-shadow: 0px 3px 7px rgba(0,0,0, .7);
+
+}

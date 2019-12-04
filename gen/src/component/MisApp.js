@@ -1,9 +1,12 @@
 import React, {Component} from 'react'
+import "../style/misapp.scss";
 
 export default class MisApp extends Component{
     render(){
         return(
-            <h1>here</h1>
-        )
+            <div className="Container">
+              <h1>Manage</h1>
+              </div>
+            )
     }
 }

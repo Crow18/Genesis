@@ -1,0 +1,6 @@
+@import "../style/mixins.scss";
+
+.Container{
+    @include container(1, inherit,850px, 80%, red);
+    // min-height: 1000px;
+}
